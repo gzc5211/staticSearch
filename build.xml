@@ -58,7 +58,7 @@
   <property name="ssClosureOutputSpec" value="ECMASCRIPT_2019"/>
 
   <!--The configuration file path, relative to this build file. -->
-  <property name="ssConfig" value="configTest.xml"/>
+  <property name="ssConfig" value="config.xml"/>
 
   <!--The full path to the configuration file. You can use either this or ssConfig. -->
   <property name="ssConfigFile" value="${ssBaseDir}/${ssConfig}"/>
