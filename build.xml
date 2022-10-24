@@ -58,7 +58,7 @@
   <property name="ssClosureOutputSpec" value="ECMASCRIPT_2019"/>
 
   <!--The configuration file path, relative to this build file. -->
-  <property name="ssConfig" value="config.xml"/>
+  <property name="ssConfig" value="configTest.xml"/>
 
   <!--The full path to the configuration file. You can use either this or ssConfig. -->
   <property name="ssConfigFile" value="${ssBaseDir}/${ssConfig}"/>
@@ -167,7 +167,7 @@
     <if>
       <equals arg1="configTest.xml" arg2="${ssConfigFileName}"/>
       <then>
-        <copy file="${ssBaseDir}/test/search.htm_" tofile="${ssBaseDir}/test/search.html"/>
+        <copy file="${ssBaseDir}/test/search.html" tofile="${ssBaseDir}/test/search.html"/>
       </then>
     </if>
   </target>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns="http://hcmc.uvic.ca/ns/staticSearch" version="2">
     <params>
-        <searchFile>../Elder_Scrolls_Morrowind/docs/search.html</searchFile>
-        <versionFile>../Elder_Scrolls_Morrowind/docs/VERSION</versionFile>
+        <searchFile>../docs/search.html</searchFile>
+        <versionFile>../test/VERSION</versionFile>
         <recurse>true<!--Need to set recurse to true for the test--></recurse>
         <phrasalSearch>true</phrasalSearch>
         <wildcardSearch>true</wildcardSearch>
@@ -30,18 +30,12 @@
     </rules>
     
     <contexts>
-       <!-- <context match="blockquote" label="Quotations"/>
-        <context match="div[@class='l']"/>-->
-        <!--2022-10-12 ebb: I'm modifying thee contexts to match the Elder Scrolls project code: -->
-        <context match="span[@class='group']"
-            label="Groups"/>
-        <context match="span[@class='person']"
-            label="People"/>
-        <context match="span[@class='location']"
-            label="Locations"/>
-        
+        <context match="blockquote" label="Quotations"/>
+        <context match="div[@class='l']"/>
+        <context match="span[@class='note'] | *[contains-token(@class,'sidenotes')]"
+            label="Notes"/>
         <context match="cite" label="Citations"/>
-       <!-- <context match="p[contains-token(@class,'citation')]" label="Citations"/>-->
+        <context match="p[contains-token(@class,'citation')]" label="Citations"/>
     </contexts>
     
     <excludes>
